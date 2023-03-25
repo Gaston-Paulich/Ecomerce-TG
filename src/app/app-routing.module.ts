@@ -1,20 +1,47 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './components/about/about.component';
-import { AllProductsComponent } from './components/all-products/all-products.component';
-import { HomeComponent } from './components/home/home.component';
-import { LavarropasComponent } from './components/lavarropas/lavarropas.component';
-import { PcComponent } from './components/pc/pc.component';
-import { TelefonosComponent } from './components/telefonos/telefonos.component';
+import { AccessoriesComponent } from './accessories/accessories.component';
+import { CamerasComponent } from './cameras/cameras.component';
+
+import { HomeComponent } from './home/home.component';
+import { LaptopsComponent } from './laptops/laptops.component';
+import { SmartphonesComponent } from './smartphones/smartphones.component';
+
 
 const routes: Routes = [
-  {path:'lavaropas',component:LavarropasComponent},
-  {path:'telefonos',component:TelefonosComponent},
-  {path:'pc',component:PcComponent},
-  {path:'about',component:AboutComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  {path:'home',component:HomeComponent},
-  {path:'allproducts',component:AllProductsComponent},
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component:HomeComponent
+  },
+  
+  {
+    path: 'laptops',
+    component: LaptopsComponent
+
+  },
+
+  {
+    path: 'smartphones',
+    component: SmartphonesComponent
+
+  },
+
+  {
+    path: 'cameras',
+    component: CamerasComponent
+
+  },
+
+  {
+    path: 'accessories',
+    component: AccessoriesComponent
+
+  }
 ];
 
 @NgModule({

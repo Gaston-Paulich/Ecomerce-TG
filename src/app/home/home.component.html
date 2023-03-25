@@ -1,0 +1,108 @@
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- shop -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="assets/img/shop01.png" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>Laptop<br>Collection</h3>
+                        <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /shop -->
+
+            <!-- shop -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="assets/img/shop03.png" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>Accessories<br>Collection</h3>
+                        <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /shop -->
+
+            <!-- shop -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="assets/img/shop02.png" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>Cameras<br>Collection</h3>
+                        <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /shop -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <!-- section title -->
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h3 class="title">New Products</h3>
+                    <div class="section-nav">
+                     
+                    </div>
+                </div>
+            </div>
+            <!-- /section title -->
+
+            <!-- Products tab & slick -->
+            <div class="col-md-12">
+                <div class="row">
+
+                    <div class="col-md-3" *ngFor="let product of allProducts">
+                        <div class="card">
+                            <img [src]="product.images" class="card-img-top">
+                            <div class="card-header" style="cursor: pointer">
+                                {{ product.name | titlecase }}
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    {{ product.description.substring(0, 25) }}...
+                                </p>
+                                <p class="price">
+                                    {{ product.price | currency:'USD' }}
+                                </p>
+                                <button class="btn btn-outline-primary d-block mx-auto" (click)="addToCart(product._id)" [class.disabled]="product.stock < 1" [class.btn-outline-danger]="product.stock < 1">
+                                 {{
+                                    product.stock < 1 ? 'Out of Stock': 'Add to Stock'
+                                 }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Products tab & slick -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
