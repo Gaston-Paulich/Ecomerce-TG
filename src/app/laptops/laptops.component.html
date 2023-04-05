@@ -1,1 +1,28 @@
-<p>laptops works!</p>
+<div class="col-md-12">
+
+
+        <div class="col-md-3" *ngFor="let laptop of laptops">
+            <div *ngIf="laptop.category == 'laptop' ">
+                <div class="card">
+                    <img [src]="laptop.images" class="card-img-top">
+                    <div class="card-header" style="cursor: pointer">
+                        {{ laptop.name | titlecase }}
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            {{ laptop.description.substring(0, 25) }}...
+                        </p>
+                        <p class="price">
+                            {{ laptop.price | currency:'USD' }}
+                        </p>
+                        <button class="btn btn-outline-primary d-block mx-auto" (click)="addToCart(laptop._id)"
+                            [class.disabled]="laptop.stock < 1" [class.btn-outline-danger]="laptop.stock < 1">
+                            {{
+                            laptop.stock < 1 ? 'Out of Stock' : 'Add to Stock' }} </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+</div>
