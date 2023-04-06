@@ -1,1 +1,28 @@
-<p>cameras works!</p>
+<div class="col-md-12">
+
+
+    <div class="col-md-3" *ngFor="let camera of cameras">
+        <div *ngIf="camera.category == 'camera' ">
+            <div class="card">
+                <img [src]="camera.images" class="card-img-top">
+                <div class="card-header" style="cursor: pointer">
+                    {{ camera.name | titlecase }}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        {{ camera.description.substring(0, 25) }}...
+                    </p>
+                    <p class="price">
+                        {{ camera.price | currency:'USD' }}
+                    </p>
+                    <button class="btn btn-outline-primary d-block mx-auto" (click)="addToCart(camera._id)"
+                        [class.disabled]="camera.stock < 1" [class.btn-outline-danger]="camera.stock < 1">
+                        {{
+                        camera.stock < 1 ? 'Out of Stock' : 'Add to Stock' }} </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
