@@ -1,9 +1,10 @@
-@media screen and (max-width:320px) {
+@media screen and (min-width:320px) {
 
   .dropdown{
     position: relative;
     left: 2.5cm;
   }
+
   .menu-toggle{
     position: relative;
     right: 5.3cm;
@@ -11,3 +12,56 @@
 
 
 }
+@media screen and (min-width:375px) {
+
+  .dropdown{
+    position: relative;
+    left: 2.5cm;
+  }
+  .menu-toggle{
+    position: relative;
+    right: 6.3cm;
+  }
+
+
+}
+@media screen and (min-width:425px) {
+
+  .dropdown{
+    position: relative;
+    left: 2cm;
+  }
+  .menu-toggle{
+    position: relative;
+    right: 7.5cm;
+  }
+
+
+}
+@media screen and (min-width:768px) {
+
+  .dropdown{
+    position: relative;
+    left: 7cm;
+  }
+  .menu-toggle{
+    position: relative;
+    left: 10cm;
+    bottom: 1.1cm;
+  }
+
+
+}
+
+@media screen and (min-width:1024px) {
+
+  .dropdown{
+    position: relative;
+    left: 12cm;
+    top: .1cm;
+  }
+
+
+
+}
+
