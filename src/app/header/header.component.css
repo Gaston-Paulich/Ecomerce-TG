@@ -1,0 +1,13 @@
+@media screen and (max-width:320px) {
+
+  .dropdown{
+    position: relative;
+    left: 2.5cm;
+  }
+  .menu-toggle{
+    position: relative;
+    right: 5.3cm;
+  }
+
+
+}
