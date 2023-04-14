@@ -446,7 +446,7 @@ textarea.input {
 #header {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: rgb(93, 56, 145);
+  background-color: #374147;
 }
 
 .header-logo {
@@ -1918,7 +1918,7 @@ textarea.input {
 
 #newsletter.section {
   border-top: 2px solid #E4E7ED;
-  border-bottom: 3px solid #D10024;
+  border-bottom: 3px solid #F99417;
   margin-top: 30px;
 }
 
@@ -1960,7 +1960,7 @@ textarea.input {
   width: 160px;
   height: 40px;
   font-weight: 700;
-  background: #D10024;
+  background: #F99417;
   color: #FFF;
   border: none;
   border-radius: 0px 40px 40px 0px;
@@ -2002,8 +2002,8 @@ textarea.input {
 ===========================================================*/
 
 #footer {
-  background: #15161D;
-  color: #B9BABC;
+  background: #000;
+  
 }
 
 #bottom-footer {
@@ -2031,7 +2031,7 @@ textarea.input {
 
 .footer-links li i {
   margin-right: 15px;
-  color: #D10024;
+  color: #F99417;
   width: 14px;
   text-align: center;
 }
@@ -2146,7 +2146,7 @@ textarea.input {
     margin-top: 5px;
   }
   .header-logo {
-    float: none;
+    
     text-align: center;
   }
   .header-logo .logo {
