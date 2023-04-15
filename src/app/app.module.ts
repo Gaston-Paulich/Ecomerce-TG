@@ -15,6 +15,7 @@ import { LaptopsComponent } from './laptops/laptops.component';
 import { SmartphonesComponent } from './smartphones/smartphones.component';
 import { CamerasComponent } from './cameras/cameras.component';
 import { AccessoriesComponent } from './accessories/accessories.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AccessoriesComponent } from './accessories/accessories.component';
     LaptopsComponent,
     SmartphonesComponent,
     CamerasComponent,
-    AccessoriesComponent
+    AccessoriesComponent,
+    ContactComponent
 
     
   ],
