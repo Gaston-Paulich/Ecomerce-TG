@@ -1,28 +1,32 @@
 <div class="col-md-12">
 
 
-    <div class="col-md-3" *ngFor="let smartphone of smartphones">
-        <div *ngIf="smartphone.category == 'smartphone' ">
-            <div class="card">
-                <img [src]="smartphone.images" class="card-img-top">
-                <div class="card-header" style="cursor: pointer">
-                    {{ smartphone.name | titlecase }}
-                </div>
-                <div class="card-body">
-                    <p class="card-text">
-                        {{ smartphone.description.substring(0, 25) }}...
-                    </p>
-                    <p class="price">
-                        {{ smartphone.price | currency:'USD' }}
-                    </p>
-                    <button class="btn btn-outline-primary d-block mx-auto" (click)="addToCart(smartphone._id)"
-                        [class.disabled]="smartphone.stock < 1" [class.btn-outline-danger]="smartphone.stock < 1">
-                        {{
-                        smartphone.stock < 1 ? 'Out of Stock' : 'Add to Stock' }} </button>
+    <div class="row">
+
+        <div  *ngFor="let smartphone of smartphones">
+            <div *ngIf="smartphone.category == 'smartphone' ">
+                <div class="card">
+                    <img [src]="smartphone.images" class="card-img-top">
+                    <div class="card-header" style="cursor: pointer">
+                        {{ smartphone.name | titlecase }}
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            {{ smartphone.description.substring(0, 25) }}...
+                        </p>
+                        <p class="price">
+                            {{ smartphone.price | currency:'USD' }}
+                        </p>
+                        <button class="btn btn-outline-primary d-block mx-auto" (click)="addToCart(smartphone._id)"
+                            [class.disabled]="smartphone.stock < 1" [class.btn-outline-danger]="smartphone.stock < 1">
+                            {{
+                            smartphone.stock < 1 ? 'Out of Stock' : 'Add to Stock' }} </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    
 
+    </div>
 
 </div>
