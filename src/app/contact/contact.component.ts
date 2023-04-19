@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { form } from './contact.model';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  person:form = {
-    name: '',
-    phoneNumber:0,
-    mail:'',
-    message:'',
+  register:form={
+    name:'',
+    mail: '',
+    phoneNumber: '',
+    message: '',
   }
+form_contact: any;
 
 
 
@@ -20,6 +22,14 @@ export class ContactComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+  addMessage(){
+    console.log(this.register);
+
+
+  }
+  reset(){
+    return this.register !=  this.register
   }
 
 }

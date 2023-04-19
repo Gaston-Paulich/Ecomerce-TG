@@ -1,6 +1,6 @@
 export interface form {
   name:string;
-  phoneNumber?: number;
+  phoneNumber?: any;
   mail: string;
   message:string;
 }

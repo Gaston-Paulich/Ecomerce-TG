@@ -1,37 +1,40 @@
-<body>
+<div class="container">
+  <form #myform="ngForm" id="contact" action="" method="post">
+    <h3>Quick Contact</h3>
+    <fieldset>
+      <input placeholder="Your name" type="text" id="name" name="name"  tabindex="1" required [(ngModel)]="register.name">
+      <p *ngIf="register.name===''; else block "> incomplete field </p>
+      <ng-template #block>
+        <p [ngStyle]="{'color':'lime'}"> full field </p>
+      </ng-template>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" name="email" type="email" tabindex="2" required [(ngModel)]="register.mail">
+      <p *ngIf="register.mail===''; else block "> incomplete field </p>
+      <ng-template #block>
+        <p [ngStyle]="{'color':'lime'}"> full field </p>
+      </ng-template>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" name="phoneNumber" type="tel" tabindex="3" required [(ngModel)]="register.phoneNumber">
+      <p *ngIf="register.phoneNumber===''; else block "> incomplete field </p>
+      <ng-template #block>
+        <p [ngStyle]="{'color':'lime'}"> full field </p>
+      </ng-template>
 
-  <section class="form_wrap">
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." name="message" required [(ngModel)]="register.message"></textarea>
+      <p *ngIf="register.message===''; else block "> incomplete field </p>
+      <ng-template #block>
+        <p [ngStyle]="{'color':'lime'}"> full field </p>
+      </ng-template>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" (click)="addMessage()">Submit</button>
 
-      <section class="cantact_info">
-          <section class="info_title">
-              <span class="fa fa-user-circle"></span>
-              <h2>INFORMACION<br>DE CONTACTO</h2>
-          </section>
-          <section class="info_items">
-              <p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
-              <p><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
-          </section>
-      </section>
+    </fieldset>
+  </form>
 
-      <form action="" class="form_contact">
-          <h2>Envia un mensaje</h2>
-          <div class="user_info">
-              <label for="names">Nombres *</label>
-              <input type="text" id="names" >
 
-              <label for="phone">Telefono / Celular</label>
-              <input type="text" id="phone">
-
-              <label for="email">Correo electronico *</label>
-              <input type="text" id="email">
-
-              <label for="mensaje">Mensaje *</label>
-              <textarea id="mensaje"></textarea>
-
-              <input type="button" value="Enviar Mensaje" id="btnSend">
-          </div>
-      </form>
-
-  </section>
-
-</body>
+</div>

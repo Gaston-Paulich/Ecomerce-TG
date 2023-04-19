@@ -14,125 +14,81 @@
 .img{
   width: 300px;
 }
-// Settings
-
-$c_0: #000000;
-$c_1: #353540;
-
-// Basic reset
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-body {
+.tarjeta-list {
+  z-index: 0;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: $c_1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.tarjeta .tarjeta_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.tarjeta .tarjeta_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.tarjeta .tarjeta_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.tarjeta:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
 }
 
 
-.l-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
-  width: 100%;
-  max-width: 1200px;
-  padding: 30px;
-
-  @media screen and (max-width: 760px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+/*
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  transition: 0.4s;
 }
-
-.b-game-card {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  padding-bottom: 150%;
-  perspective: 1000px;
-
-  &__cover {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-    background-size: cover;
-    perspective-origin: 50% 50%;
-    transform-style: preserve-3d;
-    transform-origin: top center;
-    will-change: transform;
-    transform: skewX(.001deg);
-    transition: transform .35s ease-in-out;
-
-    // Gloss
-
-    &::after {
-      display: block;
-      content: '';
-      position: absolute;
-      z-index: 100;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 120%;
-      background: linear-gradient(226deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 35%, rgba(255,255,255,0.2) 42%, rgba(255,255,255,0) 60%);
-      transform: translateY(-20%);
-      will-change: transform;
-      transition: transform .65s cubic-bezier(0.18, 0.9, 0.58, 1);
-    }
-
-  }
-
-  &:hover &__cover {
-    transform: rotateX(7deg) translateY(-6px);
-
-    &::after {
-      transform: translateY(0%);
-    }
-
-  }
-
-  // Shadows
-
-  &::before {
-    display: block;
-    content: '';
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-    background: rgba($c_0, 0.5);
-    box-shadow: 0 6px 12px 12px rgba($c_0, 0.4);
-    will-change: opacity;
-    transform-origin: top center;
-    transform: skewX(.001deg);
-    transition: transform .35s ease-in-out, opacity .5s ease-in-out;
-  }
-
-  &:hover::before {
-    opacity: 0.6;
-    transform: rotateX(7deg) translateY(-6px) scale(1.05);
-  }
-
-
-}
-
-.b-game-card{
-width: 200px;
-position: relative;
-right:16cm ;
-
-}
-
+*/
