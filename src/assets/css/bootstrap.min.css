@@ -1253,7 +1253,7 @@ pre code {
     .col-md-4 {
         -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
-        max-width: 33.333333%
+        max-width: 30.000000%
     }
     .col-md-5 {
         -ms-flex: 0 0 41.666667%;
@@ -3042,24 +3042,21 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-    color: #007bff;
-    border-color: #007bff
+    color: #DC5F00;
+    border-color: #DC5F00
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #DC5F00;
+    
 }
 
-.btn-outline-primary.focus,
-.btn-outline-primary:focus {
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .5)
-}
+
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-    color: #007bff;
+    color: #DC5F00;
     background-color: transparent
 }
 
@@ -3413,12 +3410,7 @@ input[type=submit].btn-block {
     }
 }
 
-.dropdown,
-.dropleft,
-.dropright,
-.dropup {
-    position: relative
-}
+
 
 .dropdown-toggle {
     white-space: nowrap
