@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   allProducts: ProductModel[] = [];
   myCart: CartModelServer = {} as CartModelServer;
 
+
   constructor(private _productService: ProductService,
     private _cartService: CartService
     ) { }
@@ -23,7 +24,7 @@ export class HomeComponent implements OnInit {
     this.getAllProducts();
     this._cartService.cartData$
     .subscribe(res => this.myCart = res);
-    
+
   }
 
   // getting all product list from server

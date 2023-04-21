@@ -34,8 +34,10 @@ body {
 #contact {
 	background:#F9F9F9;
 	padding:25px;
-	margin:50px 0;
+	margin:50px 0 cm;
+
 }
+
 
 #contact h3 {
 	color: #F96;
@@ -110,3 +112,4 @@ fieldset {
 :-ms-input-placeholder {
  color:#888;
 }
+

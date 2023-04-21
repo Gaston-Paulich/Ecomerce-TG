@@ -69,6 +69,21 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 .title-black {
   color: black;
 }
+.tarjeta-list{
+  max-width: 800px;
+  margin: auto;
+
+
+}
+.tarjeta{
+  transition: all .1s;
+
+}
+.tarjeta:hover{
+  background-color: rgba(255, 0, 0, 0.5);
+  transition: all .1s;
+  transform: scale(1.1);
+}
 
 @media all and (max-width: 500px) {
   .card-list {
