@@ -14,6 +14,7 @@ import { ProductService } from '../services/product.service';
 export class HomeComponent implements OnInit {
   allProducts: ProductModel[] = [];
   myCart: CartModelServer = {} as CartModelServer;
+  
 
 
   constructor(private _productService: ProductService,

@@ -8,6 +8,7 @@ import { LaptopsComponent } from './laptops/laptops.component';
 import { SmartphonesComponent } from './smartphones/smartphones.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProductComponent } from './product/product.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,10 @@ const routes: Routes = [
     path: 'home',
     component:HomeComponent
   },
-
+  {
+    path: 'product/:id',
+    component: ProductComponent
+  },
   {
     path: 'laptops',
     component: LaptopsComponent

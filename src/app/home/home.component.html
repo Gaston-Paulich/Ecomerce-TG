@@ -95,7 +95,8 @@
                         <div class="card">
                             <img [src]="product.images" class="card-img-top">
                             <div class="card-header" style="cursor: pointer">
-                                {{ product.name | titlecase }}
+                                
+                                <a [routerLink]="['/product', product._id]">{{ product.name }}</a>
                             </div>
                             <div class="card-body">
                                 <p class="card-text">
