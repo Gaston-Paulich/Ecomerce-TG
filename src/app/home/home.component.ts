@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CartModelServer } from '../models/cart.model';
 import { CartService } from '../services/cart.service';
 import { ProductModel } from 'src/app/models/product.model';
@@ -14,7 +14,7 @@ import { ProductService } from '../services/product.service';
 export class HomeComponent implements OnInit {
   allProducts: ProductModel[] = [];
   myCart: CartModelServer = {} as CartModelServer;
-  
+  @Input() img:string ='';
 
 
   constructor(private _productService: ProductService,

@@ -1,40 +1,39 @@
 <main class="container">
- 
+
     <!-- Left Column / Headphones Image -->
     <div class="left-column">
       <img data-image="red" class="active" [src]="[product.images]">
     </div>
-   
-   
+
+
     <!-- Right Column -->
     <div class="right-column">
-   
+
       <!-- Product Description -->
       <div class="product-description">
         <span>{{product.category}}</span>
         <h1>{{product.name}}</h1>
-        <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance
-            The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance
-            
+        <p>
+          {{product.description}}
         </p>
       </div>
-   
+
       <!-- Product Configuration -->
       <div class="product-configuration">
-   
+
         <!-- Product Color -->
         <div class="product-color">
-          
-   
+
+
           <div class="color-choose">
-           
+
           </div>
         </div>
-   
+
         <!-- Cable Configuration -->
-        
+
       </div>
-   
+
       <!-- Product Pricing -->
       <div class="product-price">
         <span>{{product.price | currency}}</span>

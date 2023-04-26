@@ -9,6 +9,7 @@ import { SmartphonesComponent } from './smartphones/smartphones.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './product/product.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 const routes: Routes = [
@@ -54,7 +55,10 @@ const routes: Routes = [
 
   },
   {path: 'contact',
-  component:ContactComponent}
+  component:ContactComponent},
+
+  {path:'checkout',
+  component:CheckoutComponent}
 ];
 
 @NgModule({
