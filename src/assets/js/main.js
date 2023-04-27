@@ -2294,6 +2294,9 @@ new Card({
 
 
 
+AOS.init({
+  duration: 1200,
+})
 
 
 

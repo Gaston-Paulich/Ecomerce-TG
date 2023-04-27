@@ -1532,4 +1532,8 @@
 
   }
 
+#mainNav{
+  position: sticky;
+  top: 0;
+}
 

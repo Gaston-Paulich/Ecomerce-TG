@@ -1,3 +1,4 @@
+
 <!-- SECTION -->
 <div class="section">
     <!-- container -->
@@ -19,7 +20,12 @@
             <!-- /shop -->
 
             <!-- shop -->
-            <div class="tarjeta-list">
+
+
+
+
+
+            <div  class="tarjeta-list" >
 
               <div class="tarjeta">
                 <div class="tarjeta_image">
@@ -58,15 +64,15 @@
                 </div>
 
               </div>
-
-
+            </div>
+          </div>
             <!-- /shop -->
 
         </div>
         <!-- /row -->
-    </div>
+
     <!-- /container -->
-</div>
+
 <!-- /SECTION -->
 
 <!-- SECTION -->
@@ -88,12 +94,25 @@
             <!-- /section title -->
 
             <!-- Products tab & slick -->
+            <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+
+
+
             <div class="col-md-12">
                 <div class="row">
 
-                    <div class="col-md-3" *ngFor="let product of allProducts">
+                    <div class="col-md-3" data-aos="fade-up" *ngFor="let product of allProducts">
                         <div class="card">
-                            <img [src]="product.images" class="card-img-top">
+                            <img [src]="product.images"  class="card-img-top">
                             <div class="card-header" style="cursor: pointer">
 
                                 <a [routerLink]="['/product', product._id]">{{ product.name }}</a>
@@ -124,3 +143,7 @@
 </div>
 <!-- /SECTION -->
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>

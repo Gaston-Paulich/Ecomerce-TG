@@ -9,7 +9,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/laptops">Laptops</a></li>
+                <li class="nav-item mx-0 mx-lg-1" ><a  class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/laptops" > Laptops</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/smartphones">Smartphones</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/accessories">Accessories</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="/cameras">Cameras</a></li>
@@ -22,17 +22,17 @@
             <!-- container -->
             <div>
                 <!-- row -->
-                
+
                     <!-- LOGO -->
-    
+
                     <!-- /LOGO -->
-    
-    
+
+
                     <!-- ACCOUNT -->
                     <div >
                         <div class="header-ctn">
-    
-    
+
+
                             <!-- Cart -->
                             <div class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
@@ -44,7 +44,7 @@
                                 </a>
                                 <div class="cart-dropdown">
                                     <div class="cart-list" *ngIf="myCart.items[0].product == undefined ? false: true">
-    
+
                                         <div class="product-widget" *ngFor="let p of myCart.items; index as i">
                                             <div class="product-img">
                                                 <img [src]="p.product.images" alt="">
@@ -60,7 +60,7 @@
                                             <button class="delete" (click)="removeFromCart(i)"><i
                                                     class="fa fa-close"></i></button>
                                         </div>
-    
+
                                     </div>
                                     <div class="cart-summary">
                                         <small>
@@ -78,28 +78,27 @@
                         </div>
                     </div>
                 </div> <!-- Menu Toogle -->
-    
+
                 <!-- /Menu Toogle -->
-    
+
             </div>
             <!-- /ACCOUNT -->
-    
+
             <!-- row -->
-    
+
             <!-- container -->
-        
-    
-    
+
+
+
         <!-- /MAIN HEADER -->
     <!-- /HEADER -->
-    
-    
 
-        
+
+
+
     </div>
 
-   
+
 
 </nav>
     <!-- MAIN HEADER -->
-    
