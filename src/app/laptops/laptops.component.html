@@ -3,8 +3,9 @@
 <div class="row">
 
 
-    
+
     <div *ngFor="let laptop of laptops">
+      <div class="scale-up-center">
         <div *ngIf="laptop.category == 'laptop' ">
             <div class="card">
                 <img [src]="laptop.images" class="card-img-top">
@@ -24,6 +25,8 @@
                         laptop.stock < 1 ? 'Out of Stock' : 'Add to Stock' }} </button>
                 </div>
             </div>
+          </div>
+          </div>
         </div>
     </div>
 
@@ -31,5 +34,5 @@
 
 
 </div>
-    
-</div>
+
+

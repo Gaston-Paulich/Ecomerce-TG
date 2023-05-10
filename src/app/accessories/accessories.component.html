@@ -2,8 +2,9 @@
 
     <div class="row">
 
-        
+
     <div *ngFor="let accessory of accessories">
+      <div class="scale-up-center">
         <div *ngIf="accessory.category == 'accessory' ">
             <div class="card">
                 <img [src]="accessory.images" class="card-img-top">
@@ -23,6 +24,7 @@
                         accessory.stock < 1 ? 'Out of Stock' : 'Add to Stock' }} </button>
                 </div>
             </div>
+          </div>
         </div>
     </div>
 

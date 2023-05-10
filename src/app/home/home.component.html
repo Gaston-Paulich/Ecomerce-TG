@@ -25,9 +25,9 @@
 
 
 
-            <div  class="tarjeta-list" >
+            <div  class="tarjeta-list"  >
 
-              <div class="tarjeta">
+              <div  class="tarjeta" >
                 <div class="tarjeta_image">
                  <img routerLink="/cameras" src="../../assets/img/camara.png" />
                   </div>
@@ -94,24 +94,16 @@
             <!-- /section title -->
 
             <!-- Products tab & slick -->
-            <div
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="false"
-            data-aos-anchor-placement="top-center"
-          >
 
 
 
-            <div class="col-md-12">
-                <div class="row">
 
-                    <div class="col-md-3" data-aos="fade-up" *ngFor="let product of allProducts">
-                        <div class="card">
+            <div class="col-md-12" >
+                <div  class="row" >
+
+                    <div  class="col-md-3" *ngFor="let product of allProducts">
+                      <div class="scale-up-center">
+                        <div  class="card">
                             <img [src]="product.images"  class="card-img-top">
                             <div class="card-header" style="cursor: pointer">
 
@@ -131,6 +123,7 @@
                                 </button>
                             </div>
                         </div>
+                      </div>
                     </div>
 
                 </div>

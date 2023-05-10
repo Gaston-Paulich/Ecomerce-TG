@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { CartModelServer } from '../models/cart.model';
 import { ProductModel } from '../models/product.model';
-
+declare var $: any;
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -20,7 +20,7 @@ export class CartComponent implements OnInit {
     stock: 0
   }
 
-  myCarT: CartModelServer = {} as CartModelServer;
+  myCart: CartModelServer = {} as CartModelServer;
 
   constructor(
     private _cartService: CartService
@@ -28,7 +28,13 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this._cartService.cartData$
-    .subscribe( res => this.myCarT = res );
+    .subscribe( res => this.myCart = res );
+    $('.menu-toggle').on('click',function(){})
+  }
+
+  removeFromCart(index: number){
+    this._cartService.removeFromCart(index)
+    ;
   }
 
 }

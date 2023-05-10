@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { CartModelServer, CartModelClient } from '../models/cart.model';
 import { ProductService } from './product.service';
-import { ProductModel } from '../models/product.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -39,7 +39,7 @@ export class CartService {
     // getting local storage cart
     // localStorage.setItem('cart', JSON.stringify(this.CartDataClient));
     let info: CartModelClient = JSON.parse(localStorage.getItem('cart')!);
-    
+
     if( info != null && info != undefined){
       let total: number = 0;
 
@@ -47,9 +47,10 @@ export class CartService {
         this._productService.getSingleProduct(e.id)
         .subscribe((res: any) => {
 
+
           // cart data server is empty
           if( this.cartDataServer.items[0].product == undefined ){
-            
+
             this.cartDataServer.items[0].product = res;
             this.cartDataServer.items[0].quantity = e.quantity;
             this.cartDataServer.total += (e.quantity * res.price);
@@ -103,14 +104,14 @@ export class CartService {
 
           localStorage.setItem('cart', JSON.stringify(this.CartDataClient));
           this.cartData$.next(this.cartDataServer);
-      
+
         }
         // cart data server is not empty
         else{
 
           // is this products already added?
           const index = this.cartDataServer.items.findIndex( prod => prod.product._id == p._id);
-          
+
           // new products
           if( index == -1 ){
             this.cartDataServer.items.push({
@@ -118,7 +119,7 @@ export class CartService {
               quantity: 1
             });
             this.cartDataServer.total += p.price;
-  
+
             this.CartDataClient.products.push({
               id: p._id,
               quantity: 1
@@ -140,7 +141,7 @@ export class CartService {
           this.cartData$.next(this.cartDataServer);
 
         }
-      } 
+      }
       // product has no stock
       else{
         return;

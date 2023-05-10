@@ -3,8 +3,9 @@
 
     <div class="row">
 
-        <div  *ngFor="let smartphone of smartphones">
+        <div class="lista"  *ngFor="let smartphone of smartphones">
             <div *ngIf="smartphone.category == 'smartphone' ">
+              <div class="scale-up-center">
                 <div class="card">
                     <img [src]="smartphone.images" class="card-img-top">
                     <div class="card-header" style="cursor: pointer">
@@ -23,9 +24,10 @@
                             smartphone.stock < 1 ? 'Out of Stock' : 'Add to Stock' }} </button>
                     </div>
                 </div>
+              </div>
             </div>
         </div>
-    
+
 
     </div>
 

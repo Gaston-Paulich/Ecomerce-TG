@@ -2,8 +2,9 @@
 
     <div class="row">
 
-            
+
     <div *ngFor="let camera of cameras">
+      <div class="scale-up-center">
         <div *ngIf="camera.category == 'camera' ">
             <div class="card">
                 <img [src]="camera.images" class="card-img-top">
@@ -23,6 +24,7 @@
                         camera.stock < 1 ? 'Out of Stock' : 'Add to Stock' }} </button>
                 </div>
             </div>
+          </div>
         </div>
     </div>
 
