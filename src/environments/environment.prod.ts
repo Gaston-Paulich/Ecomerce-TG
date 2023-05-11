@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  SERVER_URL: 'https://apimercado.netlify.app'
+  SERVER_URL: 'https://localhost:3001'
 };
