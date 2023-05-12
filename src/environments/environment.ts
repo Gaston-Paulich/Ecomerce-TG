@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  SERVER_URL: 'https://localhost:3001'
+  SERVER_URL: 'https://mercadotech.netlify.app/'
 
 };
 
