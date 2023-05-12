@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  SERVER_URL: 'https://mercadotech.netlify.app'
+  SERVER_URL: 'https://ecomerce-techstore-api-gaston-paulich.onrender.com'
 };
