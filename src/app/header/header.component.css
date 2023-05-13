@@ -1241,7 +1241,7 @@
       padding: 0;
       overflow-y: visible;
     }
-    @media screen and (max-width:360px) {
+    @media screen and (min-width:350px) and (max-width:375px) {
       #mainNav{
         width: 350px;
       }
@@ -1249,7 +1249,12 @@
         position: relative;
         left: .8cm;
       }
+      .cart-btns{
+        position: relative;
+        right: .8cm;
+      }
     }
+
   @media (min-width: 576px) {
     .navbar-expand-sm {
       flex-wrap: nowrap;
