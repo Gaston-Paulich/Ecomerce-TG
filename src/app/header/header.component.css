@@ -1241,6 +1241,15 @@
       padding: 0;
       overflow-y: visible;
     }
+    @media screen and (max-width:360px) {
+      #mainNav{
+        width: 350px;
+      }
+      .dropdown a{
+        position: relative;
+        left: .8cm;
+      }
+    }
   @media (min-width: 576px) {
     .navbar-expand-sm {
       flex-wrap: nowrap;
