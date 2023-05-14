@@ -9,7 +9,7 @@
             <div class="card">
                 <img [src]="camera.images" class="card-img-top">
                 <div class="card-header" style="cursor: pointer">
-                    {{ camera.name | titlecase }}
+                    <a [routerLink]="['/product', camera._id]"> {{ camera.name | titlecase }}</a>
                 </div>
                 <div class="card-body">
                     <p class="card-text">
