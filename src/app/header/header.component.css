@@ -1,5 +1,4 @@
 
-
 .nav {
     display: flex;
     flex-wrap: wrap;
@@ -1241,6 +1240,20 @@
       padding: 0;
       overflow-y: visible;
     }
+    @media screen and (min-width:350px) and (max-width:375px) {
+      #mainNav{
+        width: 350px;
+      }
+      .dropdown a{
+        position: relative;
+        left: .8cm;
+      }
+      .cart-btns{
+        position: relative;
+        right: .8cm;
+      }
+    }
+
   @media (min-width: 576px) {
     .navbar-expand-sm {
       flex-wrap: nowrap;
@@ -1292,6 +1305,28 @@
       flex-grow: 0;
       padding: 0;
       overflow-y: visible;
+    }
+  }
+
+  @media screen and (max-width: 480) {
+    #mainNav {
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 320px) and (max-height: 640px) {
+    #mainNav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+@media screen and (min-width: 353px) and (max-width:374px){
+    #mainNav{
+      width: 374px;
+    }
+    .dropdown {
+      position: relative;
+      right: .7cm;
     }
   }
   @media (min-width: 768px) {
@@ -1517,20 +1552,6 @@
     position: absolute;
   }
 
-  @media screen and (min-width: 320px){
-    .dropdown{
-      position: relative;
-      left: 5.3cm;
-    }
-  }
-  @media screen and (min-width: 375px){
-    .dropdown{
-      position: relative;
-      left: .1cm;
-
-    }
-
-  }
 
 #mainNav{
   position: sticky;

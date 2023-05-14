@@ -26,6 +26,7 @@
 
 
 
+
 .card-body p {
   font-size: 10px;
 }
@@ -119,7 +120,13 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
     flex-direction: column;
   }
 }
+@media screen and (max-width: 480px) {
+  .tarjeta-list {
+    flex-direction: column;
+    align-items: center;
+  }
 
+}
 * {
   box-sizing: border-box;
 }
