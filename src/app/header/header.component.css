@@ -1321,6 +1321,15 @@
       align-items: center;
     }
   }
+@media screen and (min-width: 353px) and (max-width:374px){
+    #mainNav{
+      width: 374px;
+    }
+    .dropdown {
+      position: relative;
+      right: .7cm;
+    }
+  }
   @media (min-width: 768px) {
     .navbar-expand-md {
       flex-wrap: nowrap;
