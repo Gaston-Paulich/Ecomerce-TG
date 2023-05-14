@@ -1308,6 +1308,12 @@
       overflow-y: visible;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    #mainNav {
+      justify-content: center;
+    }
+  }
   @media (min-width: 768px) {
     .navbar-expand-md {
       flex-wrap: nowrap;
