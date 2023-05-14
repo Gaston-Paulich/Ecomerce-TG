@@ -1,0 +1,8 @@
+@media screen and (min-width: 353px) and (max-width:374px){
+footer{
+  width: 374px;
+}
+#newsletter{
+  width: 374px;
+}
+}
